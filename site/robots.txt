@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haidermortgage.ae/sitemap.xml

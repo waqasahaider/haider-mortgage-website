@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" width="1600" height="300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Dubai skyline">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6e4f5"/>
+      <stop offset="1" stop-color="#a9c3e4"/>
+    </linearGradient>
+    <linearGradient id="skyBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7eff9"/>
+      <stop offset="1" stop-color="#cddef0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- back layer for depth -->
+  <g fill="url(#skyBack)">
+    <rect x="70" y="222" width="64" height="78"/>
+    <rect x="300" y="214" width="56" height="86"/>
+    <rect x="580" y="220" width="72" height="80"/>
+    <rect x="840" y="210" width="64" height="90"/>
+    <rect x="1080" y="222" width="74" height="78"/>
+    <rect x="1360" y="212" width="66" height="88"/>
+    <rect x="1500" y="224" width="70" height="76"/>
+  </g>
+
+  <g fill="url(#sky)">
+    <!-- Museum of the Future (torus on a mound) -->
+    <path d="M120,300 Q205,258 290,300 Z"/>
+    <path fill-rule="evenodd" d="M129,150 a76,102 0 1 0 152,0 a76,102 0 1 0 -152,0 Z M163,150 a42,60 0 1 1 84,0 a42,60 0 1 1 -84,0 Z"/>
+
+    <!-- Emirates Towers (twin peaked) -->
+    <path d="M336,300 L336,150 L358,116 L380,150 L380,300 Z"/>
+    <path d="M388,300 L388,176 L406,150 L424,176 L424,300 Z"/>
+
+    <!-- Burj Al Arab (sail) -->
+    <path d="M452,300 L470,128 Q474,117 478,128 L478,190 Q526,216 534,300 Z"/>
+    <path d="M471,128 L474,107 L477,128 Z"/>
+
+    <!-- filler cluster -->
+    <rect x="556" y="198" width="30" height="102"/>
+    <rect x="592" y="172" width="26" height="128"/>
+
+    <!-- Burj Khalifa (tallest, tapering spire) -->
+    <path d="M622,300 L633,196 L640,150 L646,110 L651,74 L655,44 L659,74 L664,110 L670,150 L677,196 L700,300 Z"/>
+    <path d="M652,44 L655,10 L658,44 Z"/>
+
+    <!-- filler cluster -->
+    <rect x="716" y="184" width="30" height="116"/>
+    <rect x="752" y="152" width="26" height="148"/>
+    <rect x="762" y="132" width="4" height="20"/>
+    <rect x="788" y="204" width="34" height="96"/>
+
+    <!-- Dubai Frame (rectangular frame) -->
+    <rect x="900" y="80" width="26" height="220"/>
+    <rect x="1010" y="80" width="26" height="220"/>
+    <rect x="900" y="80" width="136" height="26"/>
+
+    <!-- filler cluster -->
+    <rect x="1068" y="176" width="32" height="124"/>
+    <rect x="1106" y="146" width="28" height="154"/>
+    <rect x="1118" y="126" width="4" height="20"/>
+    <rect x="1142" y="198" width="34" height="102"/>
+
+    <!-- tall slab tower -->
+    <path d="M1188,300 L1188,116 L1200,104 L1212,116 L1212,300 Z"/>
+
+    <!-- Atlantis The Palm (twin towers + arch) -->
+    <path d="M1256,300 L1256,158 L1288,158 L1288,196 L1338,196 L1338,158 L1370,158 L1370,300 L1338,300 L1338,232 L1288,232 L1288,300 Z"/>
+    <path d="M1288,196 A25,25 0 0 1 1338,196 Z"/>
+
+    <!-- right-side fillers -->
+    <rect x="1392" y="168" width="32" height="132"/>
+    <rect x="1430" y="196" width="28" height="104"/>
+    <rect x="1466" y="150" width="34" height="150"/>
+    <path d="M1466,150 L1483,124 L1500,150 Z"/>
+    <rect x="1512" y="200" width="30" height="100"/>
+    <rect x="1548" y="176" width="34" height="124"/>
+  </g>
+</svg>

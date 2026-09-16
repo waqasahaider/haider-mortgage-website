@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 205 1600 600" width="1600" height="600" role="img" aria-label="Haider Mortgage">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1E3F66"/><stop offset="35%" stop-color="#2F5C93"/><stop offset="66%" stop-color="#3E74B5"/><stop offset="100%" stop-color="#5A8FCC"/></linearGradient></defs>
+  <text x="800.0" y="466.0" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="340.0" letter-spacing="11.90" fill="#0D2038">HAIDER</text>
+  <circle cx="800.0" cy="585.0" r="17.0" fill="url(#g)"/>
+  <text x="800.0" y="765.2" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="68.0" letter-spacing="37.40" fill="#0D2038">MORTGAGE</text>
+</svg>

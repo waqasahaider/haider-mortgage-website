@@ -1,0 +1,37 @@
+# ============================================================
+# Haider Mortgage — website (static) for the Hostinger KVM VPS.
+#
+# Mirrors the H b&s Digital setup: this does NOT run its own reverse
+# proxy. It plugs into the Traefik already running on the VPS (docker
+# provider, certresolver "letsencrypt") that also serves hbsdigital.ae,
+# the CRM and n8n. We add one nginx container; Traefik discovers it by
+# these labels and issues the TLS cert automatically.
+#
+# Deploy location on the VPS:  /docker/haider-site
+#   docker compose up -d
+# ============================================================
+
+name: haider-site
+
+services:
+  web:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    volumes:
+      # Static files, bind-mounted read-only. `git pull` updates them
+      # in place → zero-downtime content updates, no container restart.
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - "traefik.enable=true"
+      # Route apex + www to this container over HTTPS
+      - "traefik.http.routers.haider-web.rule=Host(`haidermortgage.ae`) || Host(`www.haidermortgage.ae`)"
+      - "traefik.http.routers.haider-web.entrypoints=websecure"
+      - "traefik.http.routers.haider-web.tls=true"
+      - "traefik.http.routers.haider-web.tls.certresolver=letsencrypt"
+      - "traefik.http.services.haider-web.loadbalancer.server.port=80"
+      # Redirect www → apex (canonical host)
+      - "traefik.http.routers.haider-web.middlewares=haider-www-redirect"
+      - "traefik.http.middlewares.haider-www-redirect.redirectregex.regex=^https://www\\.(.*)"
+      - "traefik.http.middlewares.haider-www-redirect.redirectregex.replacement=https://$${1}"
+      - "traefik.http.middlewares.haider-www-redirect.redirectregex.permanent=true"
