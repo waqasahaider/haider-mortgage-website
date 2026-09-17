@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://haidermortgage.ae/</loc><priority>1.0</priority></url>
-  <url><loc>https://haidermortgage.ae/services/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/</loc><priority>0.9</priority></url>
   <url><loc>https://haidermortgage.ae/about/</loc><priority>0.6</priority></url>
   <url><loc>https://haidermortgage.ae/blog/</loc><priority>0.7</priority></url>
-  <url><loc>https://haidermortgage.ae/faq/</loc><priority>0.6</priority></url>
-  <url><loc>https://haidermortgage.ae/contact/</loc><priority>0.7</priority></url>
+  <url><loc>https://haidermortgage.ae/faq/</loc><priority>0.7</priority></url>
+  <url><loc>https://haidermortgage.ae/contact/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/residential-property-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/uae-resident-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/non-resident-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/uae-gcc-nationals-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/commercial-property-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/off-plan-mortgage/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/refinance-balance-transfer/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/equity-release/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/portfolio-consolidation/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/mega-loans/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/plot-land-loans/</loc><priority>0.8</priority></url>
+  <url><loc>https://haidermortgage.ae/services/islamic-home-finance/</loc><priority>0.8</priority></url>
   <url><loc>https://haidermortgage.ae/blog/uae-banks-stop-financing-dld-brokerage-fees/</loc><priority>0.5</priority></url>
   <url><loc>https://haidermortgage.ae/blog/uae-mortgage-real-estate-market-2025/</loc><priority>0.5</priority></url>
   <url><loc>https://haidermortgage.ae/blog/uae-central-bank-rates-eibor-mortgage-2025/</loc><priority>0.5</priority></url>
+  <url><loc>https://haidermortgage.ae/rates/</loc><priority>0.7</priority></url>
 </urlset>
