@@ -14,6 +14,7 @@
   var WHATSAPP = 'https://wa.me/971525204842';
   var PHONE = '+971 52 520 4842';
   var LEAD_ENDPOINT = 'https://formspree.io/f/xnpqodqy';  // callback requests → info@haidermortgage.ae
+  var LEAD_HUB = 'https://n8n-4hkc.srv1777624.hstgr.cloud/webhook/haider-lead';  // same request → CRM + Telegram alert
 
   /* ---------- Built-in knowledge base (fallback / launch mode) ---------- */
   // Each entry: keywords to match + an HTML answer. Kept in sync with the site's FAQ/services.
@@ -154,8 +155,16 @@
       data.append('phone', phone);
       data.append('_subject', 'Callback request from website chat');
       data.append('source', 'Website chat assistant');
+      var hubData = new FormData();
+      hubData.append('name', name);
+      hubData.append('phone', phone);
+      hubData.append('source', 'Website chat assistant');
+      hubData.append('page', window.location.pathname);
+      var hubSent = fetch(LEAD_HUB, { method: 'POST', body: hubData, keepalive: true })
+        .then(function(r){ return r.ok; }).catch(function(){ return false; });
       fetch(LEAD_ENDPOINT, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
         .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+        .catch(function(){ return hubSent.then(function(ok){ if (!ok) return Promise.reject(); }); })
         .then(function(){ form.remove(); addMsg('bot', "Thank you, <b>" + escapeHtml(name) + "</b> — we've got your request and an advisor will call you shortly. Meanwhile, feel free to ask me anything else."); })
         .catch(function(){ form.remove(); addMsg('bot', "Sorry — I couldn't submit that. Please call or WhatsApp us on <b>" + PHONE + "</b> and we'll help right away."); });
     });

@@ -69,6 +69,16 @@
   var form = document.getElementById('contactForm');
   if (!form) return;
 
+  // Every enquiry also goes to the CRM through the n8n Lead Hub (Formspree email stays as backup).
+  var LEAD_HUB = 'https://n8n-4hkc.srv1777624.hstgr.cloud/webhook/haider-lead';
+  function sendToLeadHub(data) {
+    data.append('source', 'Website');
+    data.append('page', window.location.pathname);
+    return fetch(LEAD_HUB, { method: 'POST', body: data, keepalive: true })
+      .then(function (res) { return res.ok; })
+      .catch(function () { return false; });
+  }
+
   var note = document.getElementById('formNote');
   var button = form.querySelector('.submit-btn');
 
@@ -93,7 +103,13 @@
     if (window.fetch) {
       e.preventDefault();
       var data = new FormData(form);
+      var hubSent = sendToLeadHub(new FormData(form));
       if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+
+      function thanks() {
+        form.reset();
+        showNote('Thank you — your enquiry is on its way. One of our advisors will be in touch shortly.', false);
+      }
 
       fetch(endpoint, {
         method: 'POST',
@@ -102,19 +118,24 @@
       })
         .then(function (res) {
           if (res.ok) {
-            form.reset();
-            showNote('Thank you — your enquiry is on its way. One of our advisors will be in touch shortly.', false);
+            thanks();
           } else {
-            return res.json().then(function (d) {
+            return hubSent.then(function (ok) {
+              if (ok) { thanks(); return; }
+              return res.json().then(function (d) {
               var msg = (d && d.errors && d.errors.length)
                 ? d.errors.map(function (x) { return x.message; }).join(', ')
                 : 'Something went wrong. Please email us directly.';
               showNote(msg, true);
+              });
             });
           }
         })
         .catch(function () {
-          showNote('Network error. Please email or call us directly.', true);
+          return hubSent.then(function (ok) {
+            if (ok) thanks();
+            else showNote('Network error. Please email or call us directly.', true);
+          });
         })
         .finally(function () {
           if (button) { button.disabled = false; button.textContent = 'Request a call back'; }
