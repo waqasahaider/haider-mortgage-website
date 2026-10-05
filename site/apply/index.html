@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Your Mortgage Options | Haider Mortgage</title>
+<meta name="description" content="Answer a few quick questions and a Haider Mortgage advisor will show you your home financing options. Free, no obligation. Dubai, UAE.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0D2038">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--navy:#0D2038;--steel:#2F5C93;--steel-l:#6FA0D8;--bg:#fff;--text:#17263b;--muted:#5c6b81;--line:#d9e2ee;--sel:#eef4fb}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:560px;width:100%;margin:0 auto;padding:20px 20px 0}
+.top img{height:64px}
+.top a{color:var(--muted);font-size:14px;text-decoration:none;font-weight:600}
+main{flex:1;max-width:560px;width:100%;margin:0 auto;padding:20px}
+.bar{height:8px;background:#e3e8f0;border-radius:99px;overflow:hidden;margin:18px 0 34px}
+.bar i{display:block;height:100%;width:0;background:var(--navy);border-radius:99px;transition:width .3s}
+h1{font-size:28px;line-height:1.2;margin:0 0 22px;font-weight:800;color:var(--navy)}
+p.sub{color:var(--muted);margin:-10px 0 20px}
+.step{display:none}.step.on{display:block}
+.opt{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;font:inherit;font-size:17px;padding:18px;margin:0 0 12px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--text);cursor:pointer}
+.opt:after{content:"";width:22px;height:22px;border:1.5px solid var(--line);border-radius:50%;flex:none;margin-left:12px}
+.opt.sel{border-color:var(--navy);background:var(--sel)}
+.opt.sel:after{border:6px solid var(--navy);background:#fff}
+label{display:block;font-weight:700;margin:18px 0 8px;font-size:15px}
+.field{display:flex;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.field input{flex:1;min-width:0;border:0;font:inherit;font-size:17px;padding:16px 18px;outline:0}
+.field span{padding:16px 18px;border-left:1.5px solid var(--line);color:var(--muted);font-size:15px;display:flex;align-items:center}
+.field:focus-within{border-color:var(--navy)}
+.range{font-size:14px;color:var(--muted);margin:22px 0 12px}
+.foot{position:sticky;bottom:0;background:linear-gradient(transparent,#fff 20%);padding:18px 0 22px;margin-top:20px}
+.next{width:100%;font:inherit;font-size:18px;font-weight:700;padding:17px;border:0;border-radius:12px;background:var(--navy);color:#fff;cursor:pointer}
+.next:disabled{background:#8a8f98;cursor:not-allowed}
+.back{display:block;margin:14px auto 0;background:none;border:0;font:inherit;color:var(--muted);cursor:pointer;font-size:15px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin:18px 0 0;line-height:1.45}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none}
+.hp{position:absolute;left:-9999px}
+.done{text-align:center;padding-top:40px}
+.done .tick{width:64px;height:64px;border-radius:50%;background:var(--navy);color:#fff;font-size:34px;line-height:64px;margin:0 auto 22px}
+.done a.wa{display:inline-block;margin-top:18px;padding:15px 26px;border-radius:12px;background:#25D366;color:#fff;font-weight:700;text-decoration:none}
+.fine{font-size:12px;color:var(--muted);text-align:center;padding:0 20px 24px}
+</style>
+<!-- Meta Pixel: replace PIXEL_ID with the Haider Mortgage pixel ID -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+var PIXEL_ID='PIXEL_ID';
+if(PIXEL_ID!=='PIXEL_ID'){fbq('init',PIXEL_ID);fbq('track','PageView');}
+</script>
+</head>
+<body>
+<div class="top"><img src="/assets/logo-navy.svg" alt="Haider Mortgage"><a href="tel:+971525204842">Call us</a></div>
+<main>
+<div class="bar"><i id="prog"></i></div>
+<form id="f" novalidate>
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+
+<div class="step on" data-q="need" data-auto>
+  <h1>What do you need help with?</h1>
+  <button type="button" class="opt" data-v="New mortgage">I want a new mortgage</button>
+  <button type="button" class="opt" data-v="Refinance">I want to refinance</button>
+  <button type="button" class="opt" data-v="Equity release">I want to borrow against my home</button>
+</div>
+
+<div class="step" data-q="financing">
+  <h1>Which type of financing do you prefer?</h1>
+  <button type="button" class="opt" data-v="Islamic (Ijara/Murabaha)">Islamic, Sharia-compliant</button>
+  <button type="button" class="opt" data-v="Conventional">Conventional</button>
+  <button type="button" class="opt" data-v="Not sure">Not sure yet</button>
+</div>
+
+<div class="step" data-q="found">
+  <h1>Have you found a property yet?</h1>
+  <button type="button" class="opt" data-v="Yes">Yes</button>
+  <button type="button" class="opt" data-v="Not yet">Not yet</button>
+</div>
+
+<div class="step" data-q="price" data-money>
+  <h1 id="priceH">What is the price of your property?</h1>
+  <div class="field"><input inputmode="numeric" id="priceIn" placeholder="0"><span>AED</span></div>
+  <div class="range">Or pick a range</div>
+  <button type="button" class="opt" data-v="AED 350,000 - 750,000">AED 350,000 - 750,000</button>
+  <button type="button" class="opt" data-v="AED 750,000 - 1.5M">AED 750,000 - 1.5M</button>
+  <button type="button" class="opt" data-v="AED 1.5M - 3M">AED 1.5M - 3M</button>
+  <button type="button" class="opt" data-v="AED 3M - 6M">AED 3M - 6M</button>
+  <button type="button" class="opt" data-v="AED 6M+">AED 6M+</button>
+</div>
+
+<div class="step" data-q="hasMortgage">
+  <h1>Do you already have a mortgage?</h1>
+  <button type="button" class="opt" data-v="Yes">Yes</button>
+  <button type="button" class="opt" data-v="No">No</button>
+</div>
+
+<div class="step" data-q="residency">
+  <h1>What is your current residency status?</h1>
+  <button type="button" class="opt" data-v="UAE resident">I'm a UAE resident</button>
+  <button type="button" class="opt" data-v="UAE national">I'm a UAE national</button>
+  <button type="button" class="opt" data-v="Non-resident">I'm a non-resident</button>
+</div>
+
+<div class="step" data-q="employment">
+  <h1>What is your employment type?</h1>
+  <button type="button" class="opt" data-v="Salaried">Salaried</button>
+  <button type="button" class="opt" data-v="Self-employed">Self-employed</button>
+</div>
+
+<div class="step" data-q="income">
+  <h1>What is your monthly income?</h1>
+  <div class="field"><input inputmode="numeric" id="incomeIn" placeholder="0"><span>AED</span></div>
+  <h1 style="margin-top:28px">What is your age?</h1>
+  <div class="field"><input inputmode="numeric" id="ageIn" placeholder="0" maxlength="2"><span>YEARS</span></div>
+</div>
+
+<div class="step" data-q="contact">
+  <h1>You're almost there.</h1>
+  <p class="sub">Enter your details to see your options.</p>
+  <label for="name">Full Name</label>
+  <div class="field"><input id="name" name="name" placeholder="John Doe" autocomplete="name"></div>
+  <label for="email">Email Address</label>
+  <div class="field"><input id="email" name="email" type="email" placeholder="name@email.com" autocomplete="email"></div>
+  <label for="phone">Phone Number</label>
+  <div class="field"><span>🇦🇪 +971</span><input id="phone" name="phone" type="tel" inputmode="tel" placeholder="50 123 4567" autocomplete="tel-national"></div>
+  <label class="consent"><input type="checkbox" id="consent" checked><span>I agree that Haider Mortgage LLC may contact me by phone, WhatsApp and email (including automated or AI-assisted calls, which may be recorded) about my enquiry. I can opt out at any time.</span></label>
+</div>
+
+<div class="step done" id="done">
+  <div class="tick">✓</div>
+  <h1>Thank you — we've got your details.</h1>
+  <p class="sub">A Haider Mortgage advisor will call you shortly with your options.</p>
+  <a class="wa" href="https://wa.me/971525204842?text=Hi%2C%20I%20just%20submitted%20my%20details%20on%20your%20website" rel="noopener">Chat on WhatsApp</a>
+</div>
+
+<div class="foot" id="foot">
+  <button type="button" class="next" id="next" disabled>Next</button>
+  <button type="button" class="back" id="back" hidden>‹ Back to previous question</button>
+</div>
+</form>
+</main>
+<p class="fine">Haider Mortgage LLC · Dubai, UAE · Free, no-obligation consultation. Eligibility and rates subject to lender approval.</p>
+
+<script>
+(function(){
+  var LEAD_HUB='https://n8n-4hkc.srv1777624.hstgr.cloud/webhook/haider-lead';
+  var steps=[].slice.call(document.querySelectorAll('.step[data-q]'));
+  var ans={},i=0,sent=false;
+  var next=document.getElementById('next'),back=document.getElementById('back'),prog=document.getElementById('prog');
+  var qs=new URLSearchParams(location.search);
+
+  function stepList(){ // skip questions that don't apply
+    return steps.filter(function(s){
+      var q=s.dataset.q;
+      if(q==='price'&&ans.found==='Not yet')return false; // budget wording below
+      return true;
+    });
+  }
+  function valid(s){
+    var q=s.dataset.q;
+    if(q==='income')return num('incomeIn')>0&&num('ageIn')>=18&&num('ageIn')<=80;
+    if(q==='contact')return document.getElementById('name').value.trim().length>1&&/\S+@\S+\.\S+/.test(document.getElementById('email').value)&&digits(document.getElementById('phone').value).length>=8&&document.getElementById('consent').checked;
+    if(q==='price')return !!ans.price;
+    return !!ans[q];
+  }
+  function digits(v){return v.replace(/\D/g,'')}
+  function num(id){return parseInt(digits(document.getElementById(id).value)||'0',10)}
+  function render(){
+    var list=steps;
+    steps.forEach(function(s){s.classList.remove('on')});
+    var s=list[i];s.classList.add('on');
+    if(s.dataset.q==='price'){document.getElementById('priceH').textContent=ans.found==='Not yet'?'What is the budget for your property?':'What is the price of your property?'}
+    prog.style.width=((i+(valid(s)?0.0:0))/list.length*100)+'%';
+    prog.style.width=(Math.max(1,i)/list.length*100)+'%';
+    back.hidden=i===0;
+    next.textContent=s.dataset.q==='contact'?'See my options':'Next';
+    next.disabled=!valid(s);
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.opt');if(!b)return;
+    var s=b.closest('.step'),q=s.dataset.q;
+    [].forEach.call(s.querySelectorAll('.opt'),function(o){o.classList.remove('sel')});
+    b.classList.add('sel');ans[q]=b.dataset.v;
+    if(q==='price')document.getElementById('priceIn').value='';
+    render();
+    if(!s.hasAttribute('data-money')&&q!=='contact'){setTimeout(go,180)}
+  });
+  document.getElementById('priceIn').addEventListener('input',function(e){
+    var n=digits(e.target.value);e.target.value=n?Number(n).toLocaleString('en-US'):'';
+    [].forEach.call(e.target.closest('.step').querySelectorAll('.opt'),function(o){o.classList.remove('sel')});
+    ans.price=n?'AED '+Number(n).toLocaleString('en-US'):'';render();
+  });
+  ['incomeIn'].forEach(function(id){document.getElementById(id).addEventListener('input',function(e){var n=digits(e.target.value);e.target.value=n?Number(n).toLocaleString('en-US'):'';render()})});
+  ['ageIn','name','email','phone','consent'].forEach(function(id){document.getElementById(id).addEventListener('input',render);document.getElementById(id).addEventListener('change',render)});
+  function go(){
+    var s=steps[i];if(!valid(s))return;
+    if(s.dataset.q==='contact'){submit();return}
+    i++;render();window.scrollTo(0,0);
+  }
+  next.addEventListener('click',go);
+  back.addEventListener('click',function(){if(i>0){i--;render()}});
+
+  function submit(){
+    if(sent)return;
+    if(document.querySelector('[name=_gotcha]').value)return;
+    sent=true;next.disabled=true;next.textContent='Sending…';
+    var income=document.getElementById('incomeIn').value,age=document.getElementById('ageIn').value;
+    var msg=['Need: '+ans.need,'Financing preference: '+ans.financing,'Property found: '+ans.found,
+      (ans.found==='Not yet'?'Budget: ':'Property price: ')+ans.price,'Has existing mortgage: '+ans.hasMortgage,
+      'Residency: '+ans.residency,'Employment: '+ans.employment,'Monthly income: AED '+income,'Age: '+age,
+      'Consent to calls/WhatsApp/email: yes'].join('\n');
+    var phone='+971'+digits(document.getElementById('phone').value).replace(/^(971|0)/,'');
+    var d=new FormData();
+    d.append('name',document.getElementById('name').value.trim());
+    d.append('email',document.getElementById('email').value.trim());
+    d.append('phone',phone);
+    d.append('topic',ans.need);
+    d.append('message',msg);
+    d.append('source','Meta');
+    d.append('campaign',[qs.get('utm_campaign'),qs.get('utm_content')].filter(Boolean).join(' · ')||'Landing page /apply');
+    d.append('page',location.pathname+location.search);
+    fetch(LEAD_HUB,{method:'POST',body:d,keepalive:true}).then(function(r){
+      if(!r.ok)throw 0;
+      if(window.fbq)fbq('track','Lead');
+      steps.forEach(function(s){s.classList.remove('on')});
+      document.getElementById('foot').hidden=true;prog.style.width='100%';
+      document.getElementById('done').classList.add('on');window.scrollTo(0,0);
+    }).catch(function(){sent=false;next.disabled=false;next.textContent='See my options';alert('Something went wrong. Please try again or call +971 52 520 4842.')});
+  }
+  render();
+})();
+</script>
+</body>
+</html>
