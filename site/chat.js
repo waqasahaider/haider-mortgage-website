@@ -142,7 +142,8 @@
     form.innerHTML =
       '<input type="text" name="name" placeholder="Your name" autocomplete="name" required>' +
       '<input type="tel" name="phone" placeholder="Phone / WhatsApp number" autocomplete="tel" required>' +
-      '<button type="submit">Request my callback</button>';
+      '<button type="submit">Request my callback</button>' +
+      '<p class="hm-lead-consent">By requesting a callback, you agree that Haider Mortgage LLC may contact you by phone (including an automated AI assistant), WhatsApp or email. You can ask us to stop at any time.</p>';
     log.appendChild(form);
     log.scrollTop = log.scrollHeight;
     form.addEventListener('submit', function(e){
