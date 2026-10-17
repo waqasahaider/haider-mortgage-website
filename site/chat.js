@@ -166,7 +166,7 @@
       fetch(LEAD_ENDPOINT, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
         .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
         .catch(function(){ return hubSent.then(function(ok){ if (!ok) return Promise.reject(); }); })
-        .then(function(){ form.remove(); addMsg('bot', "Thank you, <b>" + escapeHtml(name) + "</b> — we've got your request. Lily, our AI assistant, will call you within a few minutes from <b>+1 620 982 2244</b> (8am–10pm UAE time), and an advisor will then follow up on WhatsApp. Meanwhile, feel free to ask me anything else."); })
+        .then(function(){ form.remove(); addMsg('bot', "Thank you, <b>" + escapeHtml(name) + "</b> — we've got your request. Lily, our AI assistant, will call you within a few minutes from <b>+1 620 982 2244</b> (Monday–Saturday, 8am–10pm UAE time), and an advisor will then follow up on WhatsApp. Meanwhile, feel free to ask me anything else."); })
         .catch(function(){ form.remove(); addMsg('bot', "Sorry — I couldn't submit that. Please call or WhatsApp us on <b>" + PHONE + "</b> and we'll help right away."); });
     });
   }
