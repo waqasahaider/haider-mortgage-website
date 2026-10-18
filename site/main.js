@@ -108,7 +108,7 @@
 
       function thanks() {
         form.reset();
-        showNote('Thank you — your enquiry is on its way. Lily, our AI assistant, will call you within a few minutes from +1 620 982 2244 (Monday–Saturday, 8am–10pm UAE time). An advisor will then follow up on WhatsApp from +971 52 520 4842.', false);
+        showNote('Thank you — your enquiry is on its way. Lily, our AI assistant, will call you within a few minutes from +1 620 982 2244. An advisor will then follow up on WhatsApp from +971 52 520 4842.', false);
       }
 
       fetch(endpoint, {
